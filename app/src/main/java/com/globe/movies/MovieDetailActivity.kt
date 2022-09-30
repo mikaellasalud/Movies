@@ -13,6 +13,7 @@ class MovieDetailActivity: AppCompatActivity() {
     private lateinit var tvDMovieTitle: TextView
     private lateinit var rbDMovieRating: RatingBar
     private lateinit var tvPlot: TextView
+    private lateinit var tvCast: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,16 +23,25 @@ class MovieDetailActivity: AppCompatActivity() {
         tvDMovieTitle = findViewById(R.id.tvDMovieTitle)
         rbDMovieRating = findViewById(R.id.rbDMovieRating)
         tvPlot = findViewById(R.id.tvPlot)
+        tvCast = findViewById(R.id.tvCast)
 
 
         val title = intent.getStringExtra(Constants.TITLE)
         val poster = intent.getIntExtra(Constants.POSTER,0)
         val plot = intent.getStringExtra(Constants.PLOT)
         val rating = intent.getFloatExtra(Constants.RATING,0.0F)
+        val cast = intent.getStringExtra(Constants.CAST)
 
-        tvDMovieTitle.setText(title!!)
-        tvPlot.setText(plot!!)
+        //val movie : Movie = intent.getSerializableExtra(Constants.MOVIE) as Movie
+        //tvDMovieTitle.text = movie.title
+        //tvPlot.text = movie.plot
+        //ivDMoviePoster.setImageResource(poster!!)
+        //rbDMovieRating.rating = movie.rating
+
+        tvDMovieTitle.text = title
+        tvPlot.text = plot
         ivDMoviePoster.setImageResource(poster!!)
         rbDMovieRating.rating = rating
+        tvCast.text = cast
     }
 }

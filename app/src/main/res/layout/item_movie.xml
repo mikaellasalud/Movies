@@ -43,4 +43,17 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <TextView
+        android:id="@+id/tvDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="64dp"
+        android:text="TextView"
+        android:textSize="17sp"
+        app:layout_constraintBottom_toBottomOf="@+id/ivMoviePoster"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.899"
+        app:layout_constraintStart_toEndOf="@+id/tvDMovieTitle"
+        app:layout_constraintTop_toTopOf="@+id/tvDMovieTitle" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

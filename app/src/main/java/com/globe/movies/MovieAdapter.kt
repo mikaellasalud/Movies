@@ -32,6 +32,7 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
         holder.tvMovieTitle.text = movie.title
         holder.rbMovieRating.rating = movie.rating
         holder.ivMoviePoster.setImageResource(movie.poster)
+        holder.tvDate.text = movie.date.toString()
 
         holder.ivMoviePoster.setOnClickListener(object:View.OnClickListener{
             override fun onClick(v: View?) {
@@ -49,5 +50,6 @@ class MovieAdapter : RecyclerView.Adapter<MovieAdapter.MovieViewHolder>() {
         val ivMoviePoster: ImageView = itemView.findViewById(R.id.ivMoviePoster)
         val tvMovieTitle: TextView = itemView.findViewById(R.id.tvDMovieTitle)
         val rbMovieRating: RatingBar = itemView.findViewById(R.id.rbDMovieRating)
+        val tvDate: TextView = itemView.findViewById(R.id.tvDate)
     }
 }
